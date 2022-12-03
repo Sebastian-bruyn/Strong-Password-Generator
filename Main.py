@@ -1,16 +1,33 @@
+import argparse
 import random
 import string
 
 
-#Varibles
-LengthOfPassword = 16
-password = ''
 
-#Generation
-characters = string.ascii_letters + string.digits + string.punctuation
-for x in range(LengthOfPassword):
 
-    password = password + random.choice(characters)
+#make easier to adjust length
+parser = argparse.ArgumentParser()
+parser.add_argument("-gp", "--getPassword" ,required=True)
+parser.add_argument("-l", "--length",required=True, type=int)
+args = parser.parse_args()
 
-#Output
-print(password)
+
+def getPassword():
+    #Varibles
+    
+    password = ''
+    LengthOfPassword = args.length
+
+    
+
+    #Generation
+    characters = string.ascii_letters + string.digits + string.punctuation
+    for x in range(LengthOfPassword):
+
+        password = password + random.choice(characters)
+
+    #Output
+    print(password)
+
+if args.getPassword == "True":
+    getPassword()

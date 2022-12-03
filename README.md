@@ -1,8 +1,7 @@
 # Strong-Password-Generator
 Password generator
 
-going to use a 16char (default) password that consists of different characters that will be determine by randoming cusing 16 letters
+Please comment on how i could imorve the code
 
-can be changed to however long you want your password by just changing the "LengthOfPassword" var
-
-can Always leave comments on how to improve the code
+-gp , --getPassword is required to generate a password
+-l , --length is required to determen the length of the password
